@@ -45,7 +45,10 @@ body {
 }
 
 .ranTriv {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
+}
+.time {
+    font-size: 40px;
 }
 
 a {
@@ -56,4 +59,8 @@ a {
     font-family: monospace;
     padding: 10px 30px;
     font-size: 60px;
+}
+a:hover {
+    opacity: .8;
+    color: brown;
 }
