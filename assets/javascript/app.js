@@ -8,7 +8,7 @@ var time = 45;
 var correct = 0;
 var incorrect = 0;
 var unanswered = 0;
-var corrArr = ["Theodor Seuss Geisel", "2007", "Carbon dioxide", "Marky Mark", "Bugs Bunny", "Apple", "Dr. Evil", "Tim Burton"]
+var corrArr = ["Theodor Seuss Geisel", "2007", "Carbon dioxide", "Marky Mark", "Bugs Bunny", "Apple", "Dr. Evil", "Tim Burton", "Justin Bieber", "Four"]
 
 $("#time-left").text(45);
 
@@ -65,11 +65,15 @@ function radioResults() {
     console.log(question_7);
     var question_8 = $("input[type='radio'][name='movie']:checked").val();
     console.log(question_8);
+    var question_9 = $("input[type='radio'][name='artist']:checked").val();
+    console.log(question_9);
+    var question_10 = $("input[type='radio'][name='strings']:checked").val();
+    console.log(question_10);
 
-    //stoping the time.
+    //Stoping the time.
     clearInterval(intervalId);
 
-    //array to store all the user's answers.
+    //Array to store all the user's answers.
     var questionArray = [];
 
     questionArray.push(question_1);
@@ -80,6 +84,8 @@ function radioResults() {
     questionArray.push(question_6);
     questionArray.push(question_7);
     questionArray.push(question_8);
+    questionArray.push(question_9);
+    questionArray.push(question_10);
 
     for (var i = 0; i < questionArray.length; i++) {
         if (questionArray[i] === corrArr[i]) {
@@ -91,9 +97,9 @@ function radioResults() {
         }
     }
 
-    if (correct === 8) {
+    if (correct === 10) {
         $("#alert").text("Perfect!")
-    } else if (correct < 8 && correct >= 6) {
+    } else if (correct < 10 && correct >= 6) {
         $("#alert").text("Good Job!")
     } else if (correct <= 5 && correct > 0) {
         $("#alert").text("Nice Try!")
