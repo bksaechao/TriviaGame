@@ -11,5 +11,7 @@ function countdown() {
 }
 
 function timestart() {
+    $("#trivIntro").hide();
+    $("#trivStart").show();
     intervalId = setInterval(countdown, 1000);
 }
