@@ -1,3 +1,29 @@
 body {
     background-image: url("../images/wheat.png");
 }
+
+.trivia {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(19, 49, 105);
+    height: 500px;
+    text-align: center;
+    font-size: 50px;
+    font-family: monospace;
+    color: rgba(250, 232, 129, 0.842);
+    border: double 5px rgb(165, 66, 0);
+    margin-top: 100px;
+}
+a {
+    color: black;
+    background-color: rgb(250, 232, 129, 0.842);
+    text-decoration: none;
+    border: outset 5px black;
+    font-family: monospace;
+
+}
+
+.begin {
+
+}
