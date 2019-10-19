@@ -4,13 +4,13 @@ window.onload = function () {
 }
 
 //Set variables
-var time = 60;
+var time = 45;
 var correct = 0;
 var incorrect = 0;
 var unanswered = 0;
 var corrArr = ["Theodor Seuss Geisel", "2007", "Carbon dioxide", "Marky Mark", "Bugs Bunny", "Apple", "Dr. Evil", "Tim Burton"]
 
-$("#time-left").text(60);
+$("#time-left").text(45);
 
 //Countdown function
 function countdown() {
