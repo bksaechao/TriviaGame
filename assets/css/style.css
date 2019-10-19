@@ -52,6 +52,11 @@ body {
 .time {
     font-size: 40px;
 }
+.corrAns,
+.incorrAns,
+.unAns {
+    font-size: 40px;
+}
 
 a {
     color: black;
