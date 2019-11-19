@@ -1,14 +1,14 @@
-window.onload = function () {
-    $("#gameStart").on("click", timestart);
-    $("#gameEnd").on("click", timeend);
-}
+$("#gameStart").on("click", timestart);
+$("#gameEnd").on("click", timeend);
+$("#newGame").on("click", newgame);
+
 
 //Set variables
 var time = 45;
 var correct = 0;
 var incorrect = 0;
 var unanswered = 0;
-var corrArr = ["Theodor Seuss Geisel", "2007", "Carbon dioxide", "Marky Mark", "Bugs Bunny", "Apple", "Dr. Evil", "Tim Burton", "Justin Bieber", "Four"]
+const corrArr = ["Theodor Seuss Geisel", "2007", "Carbon dioxide", "Marky Mark", "Bugs Bunny", "Apple", "Dr. Evil", "Tim Burton", "Justin Bieber", "Four"]
 
 $("#time-left").text(45);
 
@@ -46,9 +46,14 @@ function timeend() {
     $("#trivEnd").show();
 }
 
+function newgame() {
+    reset();
+    timestart();
+    $("#trivEnd").hide();
+}
 
 function radioResults() {
-    //storing the results of question 1 in a variable
+    //storing the results of each question  in a variable
     var question_1 = $("input[type='radio'][name='name']:checked").val();
     console.log(question_1);
     var question_2 = $("input[type='radio'][name='year']:checked").val();
@@ -104,6 +109,25 @@ function radioResults() {
     } else if (correct <= 5 && correct > 0) {
         $("#alert").text("Nice Try!")
     } else {
-        $("#alert").text("=(")
+        $("#alert").text("Q.Q")
+        console.log(reset());
     }
+}
+
+function reset() {
+    $('input:radio[name=name]').each(function () { $(this).prop('checked', false); });
+    $('input:radio[name=year]').each(function () { $(this).prop('checked', false); });
+    $('input:radio[name=gas]').each(function () { $(this).prop('checked', false); });
+    $('input:radio[name=mark]').each(function () { $(this).prop('checked', false); });
+    $('input:radio[name=phrase]').each(function () { $(this).prop('checked', false); });
+    $('input:radio[name=fruit]').each(function () { $(this).prop('checked', false); });
+    $('input:radio[name=sidekick]').each(function () { $(this).prop('checked', false); });
+    $('input:radio[name=movie]').each(function () { $(this).prop('checked', false); });
+    $('input:radio[name=artist]').each(function () { $(this).prop('checked', false); });
+    $('input:radio[name=strings]').each(function () { $(this).prop('checked', false); });
+    time = 45;
+    correct = 0;
+    incorrect = 0;
+    unanswered = 0;
+    questionArray = [];
 }
