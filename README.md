@@ -1,6 +1,6 @@
 # TriviaGame
 This trivia assignment is an extension to the previous javascript & jquery homework. New jquery/javascript methods such as time increments, clearing interals, and the use of radio inputs were introduced and implemented. Students were tasked to create a trivia game where the program would run a decrementing timer, display and hide certain elements at certain times, and to process and display results through jquery/javascript methods.<br><br>
-**Try mine out here!:https://bksaechao.github.io/TriviaGame/**
+**Try mine out here!: <a target="_blank" href="https://bksaechao.github.io/TriviaGame/">Trivia Game!</a>**
 
 # Helpful guides/tips
 -<strong>Triva Demo:</strong> https://www.youtube.com/watch?v=fBIj8YsA9dk&feature=youtu.be<br>
